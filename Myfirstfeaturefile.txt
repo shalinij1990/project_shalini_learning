@@ -1,0 +1,13 @@
+Feature: Login into gmail account
+
+Backgorund: Launch the Url and give username and password
+	Given I launch the gmail url
+	And I enter the username and password
+
+
+Scenario: Verify the drafting email
+	When I see the gmail home page
+	And I click on compose mail
+	And I enter the recepient of the mail
+	And I send the email
+	Then I should see the email in sent items folder
